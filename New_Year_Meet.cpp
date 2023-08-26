@@ -2,7 +2,7 @@
 #include<vector>
 #include<algorithm>
 using namespace std;
-
+// time complexity o(nlogn) space complexity o(1)
 int main(){
     int x1,x2,x3,result;
     cin>>x1>>x2>>x3;
