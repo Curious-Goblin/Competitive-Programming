@@ -1,31 +1,42 @@
-# Competitive Programming Repository
+# Competitive Programming Questions
 
-Welcome to my competitive programming repository. This collection primarily features problems from [Strivers CP Sheet](https://takeuforward.org/interview-experience/strivers-cp-sheet/) on Codeforces.
+This repository contains a curated list of competitive programming questions, along with their solutions, time complexity, and space complexity analysis.
 
-## Repository Structure
+## Table of Contents
 
-Each folder in this repository corresponds to a specific problem from the Strivers CP Sheet on Codeforces. Inside each folder, you will find:
+1. [Introduction](#introduction)
+2. [How to Use](#how-to-use)
+3. [Contribution Guidelines](#contribution-guidelines)
+4. [License](#license)
 
-- My solution to the problem.
-- The optimal solution.
-- Analysis of the time and space complexities of both solutions.
+## Introduction
 
-## Goals of This Repository
-
-1. **Learning Through Comparison**: By juxtaposing my solutions with the optimal ones, I aim to discern patterns, best practices, and areas for improvement in my coding and problem-solving strategies.
-2. **Resource for Others**: This repository can serve as a resource for other competitive programmers. By examining the comparison between different solution strategies, one can gain a deeper understanding of problem-solving techniques in competitive programming.
-3. **Documentation**: To maintain a record of my progression and challenges faced in competitive programming, enabling me to revisit and refine my skills.
+Competitive programming is a brain sport that requires a blend of problem-solving skills, creativity, and knowledge of algorithms and data structures. This repository is designed to be a valuable resource for anyone wanting to improve their skills, learn new techniques, and understand the intricacies of algorithm complexities.
 
 ## How to Use
 
-1. **Browse Problems**: Navigate to the specific problem folder you're interested in.
-2. **Compare Solutions**: Inside, you'll find both my solution and the optimal solution, allowing for a side-by-side comparison.
-3. **Analyze Complexities**: For each solution, there's an accompanying analysis of its time and space complexities to help understand the efficiency and trade-offs of different approaches.
+Each question in this repository is categorized based on its difficulty and the concepts it touches upon. Every question directory contains:
 
-## Contributions
+- A descriptive statement of the problem.
+- A solution (in your preferred programming language(s)).
+- An analysis file detailing the time and space complexities of the solution.
 
-While this repository primarily serves as my personal documentation, contributions and feedback are always welcome. If you find any mistakes, or have suggestions for improvement, please open an issue or a pull request.
+To navigate through the repository:
 
-## License
+1. Browse through the list of questions.
+2. Select a question of interest.
+3. Dive deep into the solution and complexity analysis.
 
-This repository is open-source and free to use. If reusing the content, kindly provide appropriate attribution to the original source and the specific problem link on Codeforces.
+## Contribution Guidelines
+
+We welcome and encourage community contributions!
+
+1. **Fork** the repository on GitHub.
+2. **Clone** the forked repository to your machine.
+3. Add your question, solution, and complexity analysis.
+4. Commit your changes, making sure to use descriptive commit messages.
+5. **Push** your changes back to your fork on GitHub.
+6. Create a **Pull Request** from your forked repository to the main repository.
+
+
+Happy coding! If you find this resource helpful, please consider giving it a star ⭐.

@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+// TIME COMPLEXITY = O(1) SPACE COMPLEXITY = O(1)
 int main()
 {
     string word;
