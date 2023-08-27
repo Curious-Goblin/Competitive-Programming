@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// TIME COMPLEXITY = O(N) SPACE COMPLEXITY = O(N)
 int main()
 {
     int n, count = 0;
@@ -19,7 +19,7 @@ int main()
             maxIndex = i;
         }
     }
-    for (int i = n-1; i >= 0; i--)
+    for (int i = n - 1; i >= 0; i--)
     {
         if (SoldierPositions[i] < SoldierPositions[minIndex])
         {
@@ -30,36 +30,29 @@ int main()
     {
         if (maxIndex != 0)
         {
-            // cout<<maxIndex<<endl;
             swap(SoldierPositions[maxIndex], SoldierPositions[maxIndex - 1]);
             count++;
             maxIndex--;
-            if(maxIndex==minIndex)
-            { 
+            if (maxIndex == minIndex)
+            {
                 minIndex++;
             }
         }
-        if (minIndex != (n - 1))
+        else if (minIndex != (n - 1))
         {
-            // cout<<minIndex<<endl;
             swap(SoldierPositions[minIndex], SoldierPositions[minIndex + 1]);
             count++;
             minIndex++;
-            if(minIndex==maxIndex)
-            { 
+            if (minIndex == maxIndex)
+            {
                 maxIndex--;
             }
         }
         else
         {
-            cout<<count<<endl;
+            cout << count << endl;
             break;
         }
     }
-    for(int i=0;i<n;i++)
-    {
-        cout<<SoldierPositions[i]<<" "; 
-    }
-
     return 0;
 }
