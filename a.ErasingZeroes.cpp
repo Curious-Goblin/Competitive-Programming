@@ -1,25 +1,41 @@
-#include<iostream>
-#include<string>
-#include<algorithm>
+#include <iostream>
+#include <string>
+#include <algorithm>
 using namespace std;
-
-int main(){
+//TIME COMPLEXITY = O(N) SPACE COMPLEXITY = O(1)
+int main()
+{
     int t;
-    cin>>t;
-    while(t--)
+    cin >> t;
+    while (t--)
     {
+        int starting_index = 0, last_index = 0, count = 0;
         string s;
-        cin>>s;
-        for(unsigned int i=0;i<s.size();i++)
+        cin >> s;
+        for (unsigned int i = 0; i < s.size(); i++)
         {
-            if(((i!=0)||(i!=s.size()-1))&&(s[i]=='0'))
+            if (s[i] == '1')
             {
-                replace(s.begin(), s.end(), '0', '2');
+                starting_index = i;
+                break;
             }
         }
-        
-        s.erase(remove(s.begin(),s.end(),'2'),s.end());
-        cout<<s<<endl;
+        for (int i = s.size() - 1; i >= 0; i--)
+        {
+            if (s[i] == '1')
+            {
+                last_index = i;
+                break;
+            }
+        }
+        for (int i = starting_index; i < last_index; i++)
+        {
+            if (s[i] == '0')
+            {
+                count++;
+            }
+        }
+        cout << count << endl;
     }
     return 0;
 }
