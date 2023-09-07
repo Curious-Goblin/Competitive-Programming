@@ -16,7 +16,7 @@ int main()
     }
     s.erase(remove(s.begin(), s.end(), '0'), s.end());
     transform(s.begin(), s.end(), s.begin(), ::tolower);
-    int i=0;
+    unsigned int i=0;
     while(i<s.length())
     {
         s.insert(i,1,'.');
