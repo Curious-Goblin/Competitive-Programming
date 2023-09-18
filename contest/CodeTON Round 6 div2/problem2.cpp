@@ -23,18 +23,20 @@ int main()
         }
         if (n % 2 != 0)
         {
-            int max = 0, min = 0;
+            int max = 0, min = 0, c = 0;
             for (int i = 0; i < n; i++)
             {
                 min = min ^ a[i];
             }
             for (int i = 0; i < m; i++)
             {
-                for (int j = 0; j < n; j++)
-                {
-                    a[j] = a[j] | b[i];
-                }
+                c = c | b[i];
             }
+            for (int j = 0; j < n; j++)
+            {
+                a[j] = a[j] | c;
+            }
+            // a[n - 1] = a[n - 1] | c;
             for (int i = 0; i < n; i++)
             {
                 max = max ^ a[i];
@@ -43,18 +45,20 @@ int main()
         }
         else
         {
-            int max = 0, min = 0;
+            int max = 0, min = 0, c = 0;
             for (int i = 0; i < n; i++)
             {
                 max = max ^ a[i];
             }
             for (int i = 0; i < m; i++)
             {
-                for (int j = 0; j < n; j++)
-                {
-                    a[j] = a[j] | b[i];
-                }
+                c = c | b[i];
             }
+            for (int j = 0; j < n; j++)
+            {
+                a[j] = a[j] | c;
+            }
+            // a[n - 1] = a[n - 1] | c;
             for (int i = 0; i < n; i++)
             {
                 min = min ^ a[i];
