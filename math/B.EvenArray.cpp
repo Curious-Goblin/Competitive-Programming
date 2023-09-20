@@ -26,21 +26,6 @@ int main()
                 count2++;
             }
         }
-        // if (count1 > (n / 2) || count2 > (n / 2) || (count1 == 0 && count2 != 0) || (count1 != 0 && count2 == 0))
-        // {
-        //     cout << -1 << endl;
-        // }
-        // else
-        // {
-            // if (count % 2 == 0)
-            // {
-            //     cout << count / 2 << endl;
-            // }
-            // else
-            // {
-            //     cout << (count + 1) / 2 << endl;
-            // }
-        // }
         if(count1==count2)
         {
             if (count % 2 == 0)

@@ -1,21 +1,37 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-int main(){
+int main()
+{
     int t;
-    cin>>t;
+    cin >> t;
     while (t--)
     {
-        int x,y,n;
-        cin>>x>>y>>n;
-        int d=n%x;
-        while (d!=y)
+        int x, y, n;
+        cin >> x >> y >> n;
+        if (n < x)
         {
-            n=n-1;
-            d=n%x;
+            cout << y << endl;
         }
-        cout<<n<<endl;
+        else
+        {
+            int d = n % x;
+            if (d == y)
+            {
+                cout << n << endl;
+            }
+            else if ((y - d) < 0)
+            {
+                cout<<(n-d+y)<<endl;
+            }
+            else
+            {
+                int d = n / x;
+                d = d - 1;
+                cout << (x * (d)) + y << endl;
+            }
+        }
     }
-    
+
     return 0;
 }
