@@ -21,15 +21,6 @@ int main()
             }
             target.push_back(temp);
         }
-        // for (int i = 0; i < 10; i++)
-        // {
-        //     for (int j = 0; j < 10; j++)
-        //     {
-        //         cout << target[i][j];
-        //     }
-        //     cout << endl;
-        // }
-
         for (int i = 0; i < 10; i++)
         {
             for (int j = 0; j < 10; j++)

@@ -74,27 +74,27 @@ int main()
         {
             j--;
         }
-        int nums=0;
-        if(i==j)
+        int nums = 0;
+        if (i == j)
         {
-            cout<<1<<endl;
+            cout << 1 << endl;
         }
-        else if (i==n || j==-1)
+        else if (i == n || j == -1)
         {
-            cout<<0<<endl;
+            cout << 0 << endl;
         }
         else
         {
-            while(i<=j)
+            while (i <= j)
             {
-                i=i+k;
+                i = i + k;
                 nums++;
-                while(s[i]!='B'&& i<n)
+                while (s[i] != 'B' && i < n)
                 {
                     i++;
                 }
             }
-            cout<<nums<<endl;
+            cout << nums << endl;
         }
     }
     return 0;
