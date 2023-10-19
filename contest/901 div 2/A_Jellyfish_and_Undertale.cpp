@@ -69,53 +69,53 @@ long long int solve1(long long a, long long b, vector<long long> tools)
 }
 int main()
 {
-    while (true)
-    {
-        long long int a, b, n;
-        a = rand() % 10 + 5;
-        b = rand() % 5 + 5;
-        n = rand() % 10 + 1;
-        vector<long long int> tools;
-        for (int i = 0; i < n; i++)
-        {
-            tools.push_back(rand() % 10 + 5);
-        }
-        cout << a << " " << b << " " << n << " " << endl;
-        for (int i = 0; i < n; i++)
-        {
-            cout << tools[i] << " ";
-        }
-        cout << endl;
-        int res1 = solve(a, b, tools);
-        int res2 = solve1(a, b, tools);
-        cout << "res1: " << res1 << endl;
-        cout << "res2: " << res2 << endl;
-        if (res1 == res2)
-        {
-            cout << "ok" << endl;
-        }
-        else
-        {
-            cout << "wrong answer" << endl;
-            break;
-        }
-    }
-
-    // int t;
-    // cin >> t;
-    // while (t--)
+    // while (true)
     // {
     //     long long int a, b, n;
-    //     cin >> a >> b >> n;
-    //     long long int x;
+    //     a = rand() % 10 + 5;
+    //     b = rand() % 5 + 5;
+    //     n = rand() % 10 + 1;
     //     vector<long long int> tools;
     //     for (int i = 0; i < n; i++)
     //     {
-    //         cin >> x;
-    //         tools.push_back(x);
+    //         tools.push_back(rand() % 10 + 5);
     //     }
-    //     int res = solve1(a, b, tools);
-    //     cout << res << endl;
+    //     cout << a << " " << b << " " << n << " " << endl;
+    //     for (int i = 0; i < n; i++)
+    //     {
+    //         cout << tools[i] << " ";
+    //     }
+    //     cout << endl;
+    //     int res1 = solve(a, b, tools);
+    //     int res2 = solve1(a, b, tools);
+    //     cout << "res1: " << res1 << endl;
+    //     cout << "res2: " << res2 << endl;
+    //     if (res1 == res2)
+    //     {
+    //         cout << "ok" << endl;
+    //     }
+    //     else
+    //     {
+    //         cout << "wrong answer" << endl;
+    //         break;
+    //     }
     // }
+
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        long long int a, b, n;
+        cin >> a >> b >> n;
+        long long int x;
+        vector<long long int> tools;
+        for (int i = 0; i < n; i++)
+        {
+            cin >> x;
+            tools.push_back(x);
+        }
+        int res = solve1(a, b, tools);
+        cout << res << endl;
+    }
     return 0;
 }
