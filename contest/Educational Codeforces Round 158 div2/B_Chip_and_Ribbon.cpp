@@ -1,49 +1,57 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-void solve(long long int n, vector<long long int> &nums)
+
+void solve(int n, vector<int> ribbon)
 {
-    long long int sum = 0, n_tele = 0, left = 0, right = n - 1, i = 0;
+    int sum = 0, count = 0;
+    bool flag = false;
     for (int i = 0; i < n; i++)
     {
-        sum += nums[i];
+        sum += ribbon[i];
     }
-    cout << sum << endl;
-    while (i <= 100)
+    while (sum > 0)
     {
-        i++;
         for (int i = 0; i < n; i++)
         {
-            if (nums[i] == 0)
+            if (ribbon[i] == 0)
             {
-                n_tele++;
+                // cout<<"sh"<<endl;
+                if (ribbon[i - 1] != ribbon[i])
+                {
+                    flag = true;
+                }
+                if (flag == true)
+                {
+                    count++;
+                    flag = false;
+                }
                 continue;
             }
             else
             {
-                nums[i]--;
+                ribbon[i]--;
                 sum--;
             }
         }
-        // cout<<sum<<endl;
     }
-    cout << "n_tele " << n_tele << endl;
+    cout << count << endl;
 }
+
 int main()
 {
     int t;
     cin >> t;
     while (t--)
     {
-        long long int n, a;
+        int n, a;
         cin >> n;
-        vector<long long int> nums;
+        vector<int> ribbon;
         for (int i = 0; i < n; i++)
         {
             cin >> a;
-            nums.push_back(a);
+            ribbon.push_back(a);
         }
-        solve(n, nums);
+        solve(n, ribbon);
     }
-    return 0;
 }
