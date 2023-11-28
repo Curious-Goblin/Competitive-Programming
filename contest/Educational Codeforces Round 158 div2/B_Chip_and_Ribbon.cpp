@@ -1,38 +1,63 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
-void solve(int n, vector<int> ribbon)
+void chappeHain(long long int n, vector<long long int> ribbon)
 {
-    int sum = 0, count = 0;
-    bool flag = false;
-    for (int i = 0; i < n; i++)
+    long long int sum = 0,diff=0;
+    sum += ribbon[0] - 1;
+    for (int i = 1; i < n; i++)
     {
-        sum += ribbon[i];
+        diff=ribbon[i]-ribbon[i-1];
+        sum += max(0ll, diff);
     }
-    while (sum > 0)
+    cout << sum << endl;
+}
+
+// T.C = O(N^2)
+void solve(long long int n, vector<long long int> ribbon)
+{
+    long long int left = 0, right = n - 1, count = 0, i = 0;
+    while (ribbon[left] == 0)
     {
-        for (int i = 0; i < n; i++)
+        left++;
+    }
+    while (ribbon[right] == 0)
+    {
+        right--;
+    }
+    bool flag = false;
+    while (left <= right)
+    {
+        for (i = left; i <= right; i++)
         {
             if (ribbon[i] == 0)
             {
-                // cout<<"sh"<<endl;
-                if (ribbon[i - 1] != ribbon[i])
-                {
-                    flag = true;
-                }
-                if (flag == true)
-                {
-                    count++;
-                    flag = false;
-                }
+                flag = true;
                 continue;
             }
             else
             {
                 ribbon[i]--;
-                sum--;
             }
+            if (flag == true)
+            {
+                flag = false;
+                count++;
+            }
+        }
+        while (ribbon[left] == 0)
+        {
+            left++;
+        }
+        while (ribbon[right] == 0)
+        {
+            right--;
+        }
+        if (left <= right)
+        {
+            count++;
         }
     }
     cout << count << endl;
@@ -44,14 +69,14 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n, a;
+        long long int n, a;
         cin >> n;
-        vector<int> ribbon;
+        vector<long long int> ribbon;
         for (int i = 0; i < n; i++)
         {
             cin >> a;
             ribbon.push_back(a);
         }
-        solve(n, ribbon);
+        chappeHain(n, ribbon);
     }
 }
