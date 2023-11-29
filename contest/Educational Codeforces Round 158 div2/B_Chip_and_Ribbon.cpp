@@ -5,14 +5,14 @@ using namespace std;
 
 void chappeHain(long long int n, vector<long long int> ribbon)
 {
-    long long int sum = 0,diff=0;
-    sum += ribbon[0] - 1;
+    long long int summation = 0,diff=0;
+    summation += ribbon[0] - 1;
     for (int i = 1; i < n; i++)
     {
         diff=ribbon[i]-ribbon[i-1];
-        sum += max(0ll, diff);
+        summation += max(0ll, diff);
     }
-    cout << sum << endl;
+    cout << summation << endl;
 }
 
 // T.C = O(N^2)

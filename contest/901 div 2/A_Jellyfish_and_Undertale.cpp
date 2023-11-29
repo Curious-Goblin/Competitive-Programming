@@ -2,13 +2,13 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+// PRANAV'S SOLUTION
 long long int solve(long long int a, long long int b, vector<long long int> vec)
 {
     sort(vec.begin(), vec.end());
     long long int totime = b;
     long long int sum = totime - 1;
-    long long int i = 0;
+    unsigned long long int i = 0;
     while (i < vec.size())
     {
         if (totime == 1)
@@ -40,14 +40,16 @@ long long int solve(long long int a, long long int b, vector<long long int> vec)
     }
     return sum + 1;
 }
-
+// SOURABH'S SOLUTION
 long long int solve1(long long a, long long b, vector<long long> tools)
 {
     sort(tools.begin(), tools.end());
     long long int seconds = 0;
-    unsigned int i = 0 ;
-    for (i = 0; i < tools.size(); i++)
+    int i = 0;
+    while (i < tools.size())
     {
+        // cout << "i=" << i << endl;
+        // cout << "b=" << b << endl;
         if (((b + tools[i]) <= a) && (tools[i] < a))
         {
             b = b + tools[i];
@@ -55,18 +57,35 @@ long long int solve1(long long a, long long b, vector<long long> tools)
         else if ((b == 1) && (tools[i] >= a))
         {
             b = a;
-            seconds = seconds + b - 1;
+            seconds += b - 1;
             b = 1;
         }
         else
         {
-            seconds = seconds + b - 1;
+            seconds += b - 1;
             b = 1;
-            i--;
+            i = i - 1;
+            // cout << "i=" << i << endl;
         }
+        // cout << "b=" << b << endl;
+        // cout << "seconds " << seconds << endl
+            //  << endl;
+        i++;
     }
+    seconds += b - 1;
     return seconds + 1;
 }
+
+long long int solve2(long long a, long long b, vector<long long> tools)
+{
+    long long int sum=0;
+    for(int i=0;i<tools.size();i++)
+    {
+        sum+=min(a-1,tools[i]);
+    }
+    return sum+b;
+}
+
 int main()
 {
     // while (true)
@@ -114,7 +133,7 @@ int main()
             cin >> x;
             tools.push_back(x);
         }
-        int res = solve1(a, b, tools);
+        long long int res = solve2(a, b, tools);
         cout << res << endl;
     }
     return 0;
