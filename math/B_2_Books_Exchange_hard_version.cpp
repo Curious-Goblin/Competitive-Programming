@@ -66,6 +66,7 @@ vector<int> solve1(int n, vector<int> indexes)
             auto it = vec[k].find(indexes[i]);
             if (it != vec[k].end())
             {
+                cout<<indexes[i]<<" ";
                 flag = true;
                 break;
             }
@@ -120,13 +121,12 @@ int main()
             cin >> a;
             indexes.push_back(a);
         }
-        // vector<int> result = 
-        solve1(n, indexes);
-        // for (int i = 0; i < n; i++)
-        // {
-        //     cout << result[i] << " ";
-        // }
-        // cout << endl;
+        vector<int> result = solve(n, indexes);
+        for (int i = 0; i < n; i++)
+        {
+            cout << result[i] << " ";
+        }
+        cout << endl;
     }
     return 0;
 }
