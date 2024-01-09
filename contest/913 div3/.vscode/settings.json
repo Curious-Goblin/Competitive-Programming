@@ -5,6 +5,10 @@
         "string": "cpp",
         "unordered_map": "cpp",
         "vector": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "memory": "cpp",
+        "string_view": "cpp",
+        "system_error": "cpp"
     }
 }
